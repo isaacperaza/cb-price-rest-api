@@ -21,7 +21,7 @@ CB project github repositories:
 * [cb/cb-price-rest-api (this repo)](https://github.com/isaacperaza/cb-price-rest-api)
 * [cb/price-persistence-contracts](https://github.com/isaacperaza/cb-price-persistence-contracts)
 * [cb/price-persistence-mysql](https://github.com/isaacperaza/cb-price-persistence-mysql)
-* [cb/cb-rest-framework](https://github.com/isaacperaza/cb-cb-rest-framework)
+* [cb/cb-rest-framework](https://github.com/isaacperaza/cb-rest-framework)
 
 
 ### Code, Practices, Quality and Coding Styles
@@ -81,6 +81,18 @@ This is how scripts looks like in a every `composer.json` file:
 }
 ```
 
+### Mysql Prices table schema
+
+```mysql
+CREATE TABLE `prices` (
+  `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
+  `start_date` date NOT NULL,
+  `end_date` date NOT NULL,
+  `price` decimal(10,2) NOT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `date_period` (`start_date`,`end_date`)
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+```
 
 ### Missing code implementations
 
