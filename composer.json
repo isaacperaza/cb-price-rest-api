@@ -1,0 +1,67 @@
+{
+    "name": "cb/price-rest-api",
+    "description": "CB Price Rest API",
+    "type": "project",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Isaac Peraza",
+            "email": "isaac.peraza@gmail.com"
+        }
+    ],
+    "repositories" : [
+        {
+            "type": "vcs",
+            "url": "git@github.com:isaacperaza/cb-price-persistence-contracts.git"
+        },
+        {
+            "type": "vcs",
+            "url": "git@github.com:isaacperaza/cb-price-persistence-mysql"
+        },
+        {
+            "type": "vcs",
+            "url": "git@github.com:isaacperaza/cb-rest-framework.git"
+        }
+    ],
+    "require": {
+        "php": ">=7.1.3",
+        "vlucas/phpdotenv": "^3.3",
+        "beberlei/assert": "3.2.0",
+        "cb/rest-framework": "dev-master",
+        "cb/price-persistence-mysql": "dev-master"
+    },
+    "require-dev": {
+        "fzaninotto/faker": "^1.4",
+        "phpunit/phpunit": "^7.0",
+        "mockery/mockery": "^1.0",
+        "squizlabs/php_codesniffer": "*",
+        "johnkary/phpunit-speedtrap": "*",
+        "jakub-onderka/php-parallel-lint": "*",
+        "roave/security-advisories": "dev-master"
+    },
+    "autoload": {
+        "psr-4": {
+            "Cb\\": "app/"
+        }
+    },
+    "autoload-dev": {
+        "classmap": [
+            "tests/"
+        ]
+    },
+    "config": {
+        "preferred-install": "dist",
+        "sort-packages": true,
+        "optimize-autoloader": true
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "scripts": {
+        "build": "composer lint:syntax && composer lint:style && composer test:units",
+        "lint:beautify": "vendor/bin/phpcbf --standard=PSR2 --extensions=php --severity=1 app/ tests/ -v",
+        "lint:style": "vendor/bin/phpcs --standard=PSR2 --extensions=php --severity=1 app/ tests/ -v",
+        "lint:syntax": "vendor/bin/parallel-lint app/ tests/",
+        "test:coverage": "vendor/bin/phpunit --coverage-text --coverage-html=build/coverage/html",
+        "test:units": "vendor/bin/phpunit"
+    }
+}
