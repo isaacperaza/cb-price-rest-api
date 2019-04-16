@@ -66,9 +66,10 @@ class PricesGetAllService implements PricesGetAllInterface
 }
 ```
 
-This is how every quality scripts looks like in a `composer.json`:
+This is how scripts looks like in a every `composer.json` file:
 
 ```json
+{
     "scripts": {
         "build": "composer lint:syntax && composer lint:style && composer test:units",
         "lint:beautify": "vendor/bin/phpcbf --standard=PSR2 --extensions=php --severity=1 app/ tests/ -v",
@@ -77,6 +78,7 @@ This is how every quality scripts looks like in a `composer.json`:
         "test:coverage": "vendor/bin/phpunit --coverage-text --coverage-html=build/coverage/html",
         "test:units": "vendor/bin/phpunit"
     }
+}
 ```
 
 
@@ -88,6 +90,10 @@ A lot of things are missing, but as you know create a good and quality code requ
 * Logger
 * Unit test (Just some Dto's where tested)
 * Integration test
+* Add all details on README files for each repository
+* Create a repository with rest-framework boilerplate plus documentation how to add a controller, resource, etc.
+* Deploy to server.
+* Many others
 
 ## License
 
