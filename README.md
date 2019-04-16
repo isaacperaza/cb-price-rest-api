@@ -86,6 +86,7 @@ This is how scripts looks like in a every `composer.json` file:
 
 A lot of things are missing, but as you know create a good and quality code require more effort
 
+* UI
 * Service manager (To avoid create a `new class instances` directly around the code)
 * Logger
 * Unit test (Just some Dto's where tested)

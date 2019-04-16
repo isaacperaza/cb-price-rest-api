@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "3db96054975a9531b583d63f950bec0f",
+    "content-hash": "355675afdd411a5d23753e48a91f8842",
     "packages": [
         {
             "name": "beberlei/assert",
@@ -212,12 +212,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/isaacperaza/cb-rest-framework.git",
-                "reference": "f1a581b357a85bc17edff123f8a22891396ecd34"
+                "reference": "e2aa7774ba4b664cb58b6e63b94e677f254ed658"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/isaacperaza/cb-rest-framework/zipball/f1a581b357a85bc17edff123f8a22891396ecd34",
-                "reference": "f1a581b357a85bc17edff123f8a22891396ecd34",
+                "url": "https://api.github.com/repos/isaacperaza/cb-rest-framework/zipball/e2aa7774ba4b664cb58b6e63b94e677f254ed658",
+                "reference": "e2aa7774ba4b664cb58b6e63b94e677f254ed658",
                 "shasum": ""
             },
             "require": {
@@ -279,7 +279,7 @@
                 "issues": "https://github.com/isaacperaza/cb-rest-framework/issues",
                 "source": "https://github.com/isaacperaza/cb-rest-framework"
             },
-            "time": "2019-04-16T00:47:35+00:00"
+            "time": "2019-04-16T04:27:19+00:00"
         },
         {
             "name": "phpoption/phpoption",
